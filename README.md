@@ -1,118 +1,173 @@
-# Sistema Basico de Banco
+# 🏦 Sistema Básico de Banco
 
-Projeto simples em Python para praticar Programacao Orientada a Objetos usando um sistema bancario como exemplo.
+Projeto desenvolvido em **Python** com o objetivo de praticar os principais conceitos de **Programação Orientada a Objetos (POO)** através da simulação de um sistema bancário.
 
-O codigo demonstra conceitos como classes, objetos, heranca, heranca multipla, composicao, metodos, saldo, saque, deposito, transferencia, extrato e conta remunerada.
+O sistema implementa funcionalidades como contas bancárias, clientes, extrato de transações, conta especial com limite, conta poupança remunerada e herança múltipla, demonstrando na prática conceitos fundamentais da orientação a objetos.
 
-## Objetivo
+---
 
-O objetivo deste repositorio e simular operacoes basicas de um banco, criando clientes e contas com diferentes comportamentos.
+## 📚 Objetivo
 
-Com ele e possivel estudar:
+Este projeto foi criado para consolidar conhecimentos em Python e Programação Orientada a Objetos, explorando:
 
-- Criacao de classes em Python
-- Uso de construtores com `__init__`
-- Relacionamento entre classes
-- Heranca entre contas
-- Heranca multipla
-- Composicao com extrato
-- Deposito, saque e transferencia
-- Conta especial com limite
-- Conta poupanca com remuneracao
+* Classes e Objetos
+* Encapsulamento
+* Herança
+* Herança Múltipla
+* Composição
+* Métodos e Construtores (`__init__`)
+* Polimorfismo básico
+* Organização de código em múltiplos arquivos
 
-## Estrutura do projeto
+---
+
+## 🚀 Funcionalidades
+
+### 👤 Clientes
+
+* Cadastro de clientes
+* Armazenamento de CPF, nome e endereço
+
+### 💰 Contas Bancárias
+
+* Depósito
+* Saque
+* Consulta de saldo
+* Transferência entre contas
+
+### 📄 Extrato
+
+* Registro das movimentações realizadas
+* Histórico de transações
+
+### ⭐ Conta Especial
+
+* Limite adicional para saque
+* Herança da classe Conta
+
+### 📈 Conta Remunerada
+
+* Aplicação de taxa de rendimento
+* Simulação de conta poupança
+* Utilização de herança múltipla
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,git,github,vscode" />
+</p>
+
+* Python 3
+* Git
+* GitHub
+* Visual Studio Code
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```text
 Heranca/
-|-- Cliente.py
-|-- Conta.py
-|-- ContaClienteExtrato.py
-|-- ContaCompleta.py
-|-- ContaEspecial.py
-|-- ContaRemuneradaPoupanca.py
-|-- Extrato.py
-|-- Heranca.py
-|-- Poupanca.py
-`-- README.md
+│
+├── Cliente.py
+├── Conta.py
+├── ContaClienteExtrato.py
+├── ContaCompleta.py
+├── ContaEspecial.py
+├── ContaRemuneradaPoupanca.py
+├── Extrato.py
+├── Heranca.py
+├── Poupanca.py
+└── README.md
 ```
 
-## Arquivos
+---
 
-| Arquivo | Descricao |
-| --- | --- |
-| `Cliente.py` | Define a classe `Cliente`, com CPF, nome e endereco. |
-| `Conta.py` | Define uma conta bancaria simples com deposito, saque, transferencia e consulta de saldo. |
-| `ContaClienteExtrato.py` | Versao da classe `Conta` com composicao usando a classe `Extrato`. |
-| `Extrato.py` | Armazena e exibe as transacoes realizadas em uma conta. |
-| `ContaEspecial.py` | Define uma conta especial que herda de `Conta` e possui limite para saque. |
-| `Poupanca.py` | Define uma poupanca com taxa de remuneracao mensal. |
-| `ContaRemuneradaPoupanca.py` | Usa heranca multipla com `Conta` e `Poupanca` para criar uma conta remunerada. |
-| `Heranca.py` | Arquivo de teste para demonstrar clientes, contas comuns e conta especial. |
-| `ContaCompleta.py` | Arquivo de teste para demonstrar conta, poupanca e conta remunerada. |
+## 📋 Arquivos do Projeto
 
-## Como executar
+| Arquivo                    | Descrição                                      |
+| -------------------------- | ---------------------------------------------- |
+| Cliente.py                 | Classe responsável pelos dados do cliente      |
+| Conta.py                   | Implementa operações básicas da conta bancária |
+| ContaClienteExtrato.py     | Conta utilizando composição com Extrato        |
+| Extrato.py                 | Registro das movimentações da conta            |
+| ContaEspecial.py           | Conta com limite adicional para saque          |
+| Poupanca.py                | Implementa taxa de remuneração                 |
+| ContaRemuneradaPoupanca.py | Exemplo de herança múltipla                    |
+| Heranca.py                 | Demonstração de contas comuns e especiais      |
+| ContaCompleta.py           | Demonstração de conta remunerada               |
 
-Abra o terminal dentro da pasta `Heranca`:
+---
+
+## ▶️ Como Executar
+
+### 1. Clone o repositório
 
 ```bash
-cd Heranca
+git clone https://github.com/OlokoDri/SistemaBasicoDeBanco.git
 ```
 
-Execute um dos arquivos principais:
+### 2. Acesse a pasta do projeto
+
+```bash
+cd SistemaBasicoDeBanco/Heranca
+```
+
+### 3. Execute um dos exemplos
 
 ```bash
 python Heranca.py
 ```
 
-ou:
+ou
 
 ```bash
 python ContaCompleta.py
 ```
 
-## Exemplo de uso
+---
 
-O arquivo `Heranca.py` cria clientes e contas, faz deposito, tentativa de saque e saque usando limite em uma conta especial.
+## 🎓 Conceitos de POO Aplicados
 
-O arquivo `ContaCompleta.py` cria uma conta remunerada com base em uma taxa de poupanca e atualiza o saldo com remuneracao.
+### Herança
 
-## Conceitos usados
+A classe `ContaEspecial` herda comportamentos da classe `Conta`, adicionando um limite de saque.
 
-### Classe `Cliente`
+### Herança Múltipla
 
-Representa uma pessoa cliente do banco.
+A classe `ContaRemuneradaPoupanca` combina funcionalidades das classes `Conta` e `Poupanca`.
 
-### Classe `Conta`
+### Composição
 
-Representa uma conta bancaria comum, com metodos para:
+A classe `ContaClienteExtrato` utiliza a classe `Extrato` para registrar movimentações financeiras.
 
-- Depositar dinheiro
-- Sacar dinheiro
-- Transferir valor para outra conta
-- Mostrar saldo
+### Encapsulamento
 
-### Classe `ContaEspecial`
+Os atributos e métodos são organizados dentro das classes para representar entidades do sistema bancário.
 
-Herda de `Conta` e adiciona um limite extra para saque.
+---
 
-### Classe `Poupanca`
+## 🔮 Melhorias Futuras
 
-Representa uma poupanca com taxa de remuneracao.
+* [ ] Interface gráfica com Tkinter
+* [ ] Persistência de dados em arquivos
+* [ ] Integração com banco de dados SQLite
+* [ ] Sistema de autenticação
+* [ ] Cadastro de múltiplos clientes
+* [ ] Testes automatizados
 
-### Classe `ContaRemuneradaPoupanca`
+---
 
-Combina comportamentos de `Conta` e `Poupanca`, demonstrando heranca multipla.
+## 👨‍💻 Autor
 
-### Classe `Extrato`
+**Adriano**
 
-Armazena as transacoes realizadas, como depositos, saques e transferencias.
+🎓 Estudante de Engenharia de Software
 
-## Requisitos
+🔗 GitHub: https://github.com/OlokoDri
 
-Para executar o projeto, e necessario ter o Python instalado.
+---
 
-Nao ha dependencias externas.
-
-## Autor
-
-Projeto desenvolvido para estudo de Python e Programacao Orientada a Objetos.
+⭐ Se este projeto foi útil para você ou ajudou nos estudos de POO, considere deixar uma estrela no repositório.
